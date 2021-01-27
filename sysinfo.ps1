@@ -16,9 +16,9 @@
 
 $IP = (get-netipaddress).ipv4address | Select-string "192*"
 $Date = Get-Date
+$PSVersion = $HOST.Version.Major
 
-
-$body = "This machine's IP is: $IP. User is: $env:username. Today's date is $Date. Hostname is: $host. "
+$body = "This machine's IP is: $IP. User is: $env:username. Powershell version is: $PSVersion. Today's date is $Date. Hostname is: $host. "
 
 write-host($body)
 
