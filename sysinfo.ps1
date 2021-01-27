@@ -14,7 +14,7 @@
 
 #Link to git repo, screenshot of the body is the submission.
 
-$IP = getIP
+$IP = (get-netipaddress).ipv4address | Select-string "192*"
 $Date = Get-Date
 
 
