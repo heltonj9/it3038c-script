@@ -5,3 +5,5 @@ My App
 
 ```javascript
 Javascript code block to highlight what's happening in my code
+
+###vs code change
