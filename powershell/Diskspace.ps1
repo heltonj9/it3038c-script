@@ -4,7 +4,7 @@
 Function Get-FreeDiskSpace($drive)
 {
     #Script begins by asking which drive you want to check space on. (Usually C drive)
-    $drive = Read-Host "Which drive to check space on?"
+    $drive = Read-Host "Which drive to check space on? (No semi-colon)"
     #Script searches for both Free and Used separately to establish them as variables.
     $Free = Get-PSDrive $drive | Select-Object Free
     $Used = Get-PSDrive $drive | Select-Object Used
@@ -12,7 +12,6 @@ Function Get-FreeDiskSpace($drive)
     "$drive has $Free MegaBytes left on it, and has used $Used MegaBytes so far."
 }
 Get-FreeDiskSpace
-
 
 #This was the only source I used: 
 #culterculter 4, et al. "How to Get Disk Capacity and Free Space of Remote Computer." Stack Overflow, 1 Aug. 1961, 

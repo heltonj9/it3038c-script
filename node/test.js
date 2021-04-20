@@ -1,14 +1,6 @@
-var path = require("path")
-var hello = "Hello from Node JS Variable!";
+var fs = require("fs");
 
-console.log("Hello, World!")
-console.log(`Printing variable hello: ${hello}`)
-
-console.log("directory name: " + __dirname)
-console.log("directory and file name: " + __filename)
-
-
-console.log("Using PATH module: ")
-console.log(`Hello from file ${path.basename(__filename)}`)
-
-console.log(`Process args: ${process.argv}`)
+fs.readFile('./node/public/my-file.txt', 'utf8', function(err, data) {
+    if (err) throw err;
+    console.log(data);
+})
