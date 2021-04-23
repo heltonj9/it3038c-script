@@ -7,3 +7,7 @@ STEPS TO RUNNING Project3.py CORRECTLY
 3) Run the script. I used Visual Basic and local files stored directly on my C drive and the command "Python C:/it3038c-script/Labs/Project3.py" in terminal, but pretty much just enter your own filepath wherever the file is saved for you with Python in front of it (ex. "Python {filepath})
 4) Enter current listing price. It may seem inconvenient, but entering the current listing price the first time around is the best way to get the script started.
 5) Receive emails if the price on the product goes down, and enjoy! Also note that upon sending an email, the script will stop, so if you wish to have it look for an even further price drop, you will have to restart the script.
+
+
+Source (Had to adapt a lot to make it work, his SMTP was great):
+Sharma, Vishal. “Getting Amazon Price Drop Alert Using This Python Script.” Medium, Towards Data Science, 1 June 2020, towardsdatascience.com/getting-amazon-price-drop-alert-using-this-python-script-616a98bcba6b. 
