@@ -1,5 +1,6 @@
 #Necessary to import smtplib so that we can send an email, and time so we can run the script
 #on a timer before it repeats to prevent being kicked from the website for possible DDoS attacking.
+#Also import the soup and requests functions from in-class to get the website scanner working.
 from bs4 import BeautifulSoup
 import smtplib
 import time
@@ -18,6 +19,7 @@ URL = ("https://www.newegg.com/amd-ryzen-5-5600x/p/N82E16819113666?Description=r
 print("Enter current price: ")
 currentPrice = input()
 print("Current price was %s" % (currentPrice))
+#Converting the currentPrice variable from string to int.
 currentPrice = int(re.search('[0-9]+',currentPrice).group(0))
 
 #Declaring the process get_price() as a combined entity so that we can have it continue to
@@ -33,7 +35,7 @@ def get_price():
     print("New price was %s" % (new_Price))
     final_price = currentPrice - new_Price;
     print ("Price difference was %s" % (final_price))
-#Defining the subject "send_email()" and combining it all 
+#Defining the subject "send_email()" and combining the whole process of sending an email 
 #so that it will all run under one message later.
     def send_email():
         #Specifying which server to connect to to send the email from. Chose google for this example.
