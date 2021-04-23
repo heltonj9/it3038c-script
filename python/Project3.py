@@ -30,7 +30,6 @@ def get_price():
     new_Price = new_Price.replace('$','')
     new_Price = int(re.search('[0-9]+',new_Price).group(0))
 #Displaying in console the logistics of the price search before using it in the script.
-    print (new_Price)
     print("New price was %s" % (new_Price))
     final_price = currentPrice - new_Price;
     print ("Price difference was %s" % (final_price))
